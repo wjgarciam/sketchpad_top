@@ -1,20 +1,13 @@
 const padContainer = document.querySelector("#container");
-let size = prompt("Please select a size for the grid")
+let size = 25
 createGrid(size)
+
 function createGrid(size) {
-    for (let i = 0; i < (size); i++) {
+        for (let i = 0; i < (size*size); i++) {
         let columns = document.createElement("div")
         columns.classList.add("columns")
-        columns.textContent = "Hello"
-        columns.style.color = "blue"
+        columns.style.backgroundColor = "red"
+        columns.style.width = (650/size) + "px"
         padContainer.appendChild(columns);
-    }
-    
-    for (let i = 0; i < (size); i++) {
-        let rows = document.createElement("div")
-        rows.classList.add("rows")
-        rows.textContent = "Hello"
-        rows.style.color = "red"
-        padContainer.appendChild(rows);
     }
 }
